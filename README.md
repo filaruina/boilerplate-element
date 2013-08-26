@@ -1,14 +1,8 @@
-# &lt;my-element&gt;
+# &lt;form is="xhr"&gt;
 
-TODO: Write a project description
+An extension for the form tag, providing a way to have forms that do XHR instead of browser requests.
 
-> Maintained by [Your Name](https://github.com/yourname).
-
-## Demo
-
-![My Element]()
-
-> [Check it live](http://customelements.github.io/boilerplate-element).
+> Maintained by [Filipe La Ruina](https://github.com/filaruina).
 
 ## Usage
 
@@ -21,22 +15,21 @@ TODO: Write a project description
 2. Import Custom Element:
 
 	```html
-	<link rel="import" href="src/my-element.html">
+	<link rel="import" href="src/xhrform-element.html">
 	```
 
 3. Start using it!
 
 	```html
-	<my-element></my-element>
+	<form is="xhr" action="/foo/bar" method="get"></form>
 	```
 
 ## Options
 
-Attribute  | Options                   | Default             | Description
----        | ---                       | ---                 | ---
-`foo`      | *string*                  | `bar`               | Lorem ipsum
-`bar`      | `abc`, `def`, `ghi` 	   | `foo`               | Lorem ipsum
-`height`   | *int*                     | `100`               | Lorem ipsum
+Attribute        | Options                        | Default             | Description
+---              | ---                            | ---                 | ---
+`is` (optional)  | *string*                       | `normal`            | Defines the type of xhr
+`method`         | `get`, `post`, `put`, `delete` | `get`               | Method to use on the request, put and delete available only for xhr
 
 
 ## Contributing
@@ -49,7 +42,7 @@ Attribute  | Options                   | Default             | Description
 
 ## History
 
-* v0.0.1 August 19, 2013
+* v0.0.1 August 26, 2013
 	* Started project using [boilerplate-element](https://github.com/customelements/boilerplate-element)
 
 ## License
